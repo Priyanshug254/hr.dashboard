@@ -65,14 +65,14 @@ export function JobManagement() {
       </div>
 
       <Tabs defaultValue="active" className="space-y-6">
-        <TabsList className="bg-slate-800/50 border-slate-700">
-          <TabsTrigger value="active" className="data-[state=active]:bg-slate-700">
+        <TabsList className="bg-slate-800/50 border-slate-700 ">
+          <TabsTrigger value="active" className="data-[state=active]:bg-slate-700 text-white">
             Active Jobs
           </TabsTrigger>
-          <TabsTrigger value="draft" className="data-[state=active]:bg-slate-700">
+          <TabsTrigger value="draft" className="data-[state=active]:bg-slate-700 text-white">
             Drafts
           </TabsTrigger>
-          <TabsTrigger value="create" className="data-[state=active]:bg-slate-700">
+          <TabsTrigger value="create" className="data-[state=active]:bg-slate-700 text-white">
             Create Job
           </TabsTrigger>
         </TabsList>

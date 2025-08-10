@@ -72,13 +72,13 @@ export function InterviewScheduler() {
 
       <Tabs defaultValue="today" className="space-y-6">
         <TabsList className="bg-slate-800/50 border-slate-700">
-          <TabsTrigger value="today" className="data-[state=active]:bg-slate-700">
+          <TabsTrigger value="today" className="data-[state=active]:bg-slate-700 text-white">
             Today's Schedule
           </TabsTrigger>
-          <TabsTrigger value="live" className="data-[state=active]:bg-slate-700">
+          <TabsTrigger value="live" className="data-[state=active]:bg-slate-700 text-white">
             Live Interviews
           </TabsTrigger>
-          <TabsTrigger value="calendar" className="data-[state=active]:bg-slate-700">
+          <TabsTrigger value="calendar" className="data-[state=active]:bg-slate-700 text-white">
             Calendar View
           </TabsTrigger>
         </TabsList>

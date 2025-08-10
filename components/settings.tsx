@@ -31,16 +31,16 @@ export function Settings() {
 
       <Tabs defaultValue="ai" className="space-y-6">
         <TabsList className="bg-slate-800/50 border-slate-700">
-          <TabsTrigger value="ai" className="data-[state=active]:bg-slate-700">
+          <TabsTrigger value="ai" className="data-[state=active]:bg-slate-700 text-white">
             AI Configuration
           </TabsTrigger>
-          <TabsTrigger value="security" className="data-[state=active]:bg-slate-700">
+          <TabsTrigger value="security" className="data-[state=active]:bg-slate-700 text-white">
             Security
           </TabsTrigger>
-          <TabsTrigger value="integrations" className="data-[state=active]:bg-slate-700">
+          <TabsTrigger value="integrations" className="data-[state=active]:bg-slate-700 text-white">
             Integrations
           </TabsTrigger>
-          <TabsTrigger value="notifications" className="data-[state=active]:bg-slate-700">
+          <TabsTrigger value="notifications" className="data-[state=active]:bg-slate-700 text-white">
             Notifications
           </TabsTrigger>
         </TabsList>

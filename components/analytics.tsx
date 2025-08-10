@@ -64,16 +64,16 @@ export function Analytics() {
 
       <Tabs defaultValue="overview" className="space-y-6">
         <TabsList className="bg-slate-800/50 border-slate-700">
-          <TabsTrigger value="overview" className="data-[state=active]:bg-slate-700">
+          <TabsTrigger value="overview" className="data-[state=active]:bg-slate-700 text-white">
             Overview
           </TabsTrigger>
-          <TabsTrigger value="performance" className="data-[state=active]:bg-slate-700">
+          <TabsTrigger value="performance" className="data-[state=active]:bg-slate-700 text-white">
             Performance
           </TabsTrigger>
-          <TabsTrigger value="insights" className="data-[state=active]:bg-slate-700">
+          <TabsTrigger value="insights" className="data-[state=active]:bg-slate-700 text-white">
             AI Insights
           </TabsTrigger>
-          <TabsTrigger value="reports" className="data-[state=active]:bg-slate-700">
+          <TabsTrigger value="reports" className="data-[state=active]:bg-slate-700 text-white">
             Reports
           </TabsTrigger>
         </TabsList>
@@ -93,7 +93,7 @@ export function Analytics() {
                 {languageStats.map((stat, index) => (
                   <div key={index} className="space-y-2">
                     <div className="flex justify-between items-center">
-                      <span className="text-sm text-slate-300">{stat.language}</span>
+                      <span className="text-sm text-white">{stat.language}</span>
                       <div className="flex items-center space-x-2">
                         <span className="text-sm text-slate-400">{stat.candidates}</span>
                         <span className="text-sm text-white font-medium">{stat.percentage}%</span>

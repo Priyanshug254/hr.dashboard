@@ -193,16 +193,16 @@ export function CandidatePipeline() {
       <Tabs defaultValue="all" className="space-y-6">
         <div className="flex items-center justify-between">
           <TabsList className="bg-slate-800/50 border-slate-700">
-            <TabsTrigger value="all" className="data-[state=active]:bg-slate-700">
+            <TabsTrigger value="all" className="data-[state=active]:bg-slate-700 text-white">
               All Candidates
             </TabsTrigger>
-            <TabsTrigger value="scheduled" className="data-[state=active]:bg-slate-700">
+            <TabsTrigger value="scheduled" className="data-[state=active]:bg-slate-700 text-white">
               Scheduled
             </TabsTrigger>
-            <TabsTrigger value="in-progress" className="data-[state=active]:bg-slate-700">
+            <TabsTrigger value="in-progress" className="data-[state=active]:bg-slate-700 text-white">
               In Progress
             </TabsTrigger>
-            <TabsTrigger value="completed" className="data-[state=active]:bg-slate-700">
+            <TabsTrigger value="completed" className="data-[state=active]:bg-slate-700 text-white">
               Completed
             </TabsTrigger>
           </TabsList>

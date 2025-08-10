@@ -63,56 +63,89 @@ export function AppSidebar({ activeTab, setActiveTab }: AppSidebarProps) {
     <Sidebar className="border-r border-white/10 bg-white/5 backdrop-blur-sm">
       <SidebarHeader className="p-6">
         <div className="flex items-center space-x-3">
-          <div className="w-8 h-8 bg-gradient-to-r from-purple-500/80 to-pink-500/80 rounded-lg flex items-center justify-center backdrop-blur-sm">
-            <BrainCircuit className="w-5 h-5 text-white" />
+          <div className="w-8 h-8 rounded-lg overflow-hidden flex items-center justify-center">
+            <img
+                src="/logo.png"
+                alt="HiringMinds Logo"
+                className="w-full h-full object-contain"
+              />
           </div>
+
           <div>
-            <h2 className="text-lg font-bold text-white">HiringMinds</h2>
-            <p className="text-xs text-slate-400">AI Recruitment</p>
+            <h2 className="text-lg font-bold text-gray-800">HiringMinds</h2>
+            <p className="text-xs font-bold text-gray-600">AI Recruitment</p>
           </div>
         </div>
       </SidebarHeader>
 
       <SidebarContent>
         <SidebarGroup>
-          <SidebarGroupLabel className="text-slate-400 text-xs uppercase tracking-wider">Main Menu</SidebarGroupLabel>
+          <SidebarGroupLabel className="text-gray-600 font-bold text-xs uppercase tracking-wider">Main Menu</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
               {menuItems.map((item) => (
                 <SidebarMenuItem key={item.title}>
-                  <SidebarMenuButton
+                <SidebarMenuButton
                     onClick={() => setActiveTab(item.key)}
                     isActive={activeTab === item.key}
-                    className="text-gray-300 hover:text-white hover:bg-white/10 transition-all duration-300"
+                    className={`transition-all duration-300 ease-out
+                      ${activeTab === item.key 
+                        ? "text-black font-semibold bg-gradient-to-r from-purple-500/30 to-pink-500/30 scale-105 shadow-lg"
+                        : "text-gray-800 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/30"}`}
+                    style={{
+                      borderRadius: "8px", // Rounded corners for modern look
+                      transformOrigin: "center", // Scale from center
+                      transition: "transform 0.2s ease, box-shadow 0.3s ease",
+                    }}
                   >
-                    <item.icon className="w-4 h-4" />
-                    <span>{item.title}</span>
-                  </SidebarMenuButton>
+                  <item.icon className="w-4 h-4" />
+                  <span>{item.title}</span>
+                </SidebarMenuButton>
+
+
                 </SidebarMenuItem>
               ))}
             </SidebarMenu>
           </SidebarGroupContent>
         </SidebarGroup>
 
-        <SidebarGroup>
-          <SidebarGroupLabel className="text-slate-400 text-xs uppercase tracking-wider">Features</SidebarGroupLabel>
-          <SidebarGroupContent>
-            <SidebarMenu>
-              <SidebarMenuItem>
-                <SidebarMenuButton className="text-gray-300 hover:text-white hover:bg-white/10 transition-all duration-300">
-                  <Shield className="w-4 h-4" />
-                  <span>Cheat Detection</span>
-                </SidebarMenuButton>
-              </SidebarMenuItem>
-              <SidebarMenuItem>
-                <SidebarMenuButton className="text-gray-300 hover:text-white hover:bg-white/10 transition-all duration-300">
-                  <Globe className="w-4 h-4" />
-                  <span>Multilingual Support</span>
-                </SidebarMenuButton>
-              </SidebarMenuItem>
-            </SidebarMenu>
-          </SidebarGroupContent>
-        </SidebarGroup>
+            <SidebarGroup>
+        <SidebarGroupLabel className="text-gray-600 font-bold text-xs uppercase tracking-wider">
+          Features
+        </SidebarGroupLabel>
+        <SidebarGroupContent>
+          <SidebarMenu>
+
+            <SidebarMenuItem>
+              <SidebarMenuButton
+                className="text-gray-800 hover:scale-105 hover:text-black hover:shadow-lg hover:shadow-purple-500/30 transition-all duration-300 ease-out rounded-md"
+                style={{
+                  transformOrigin: "center",
+                  transition: "transform 0.2s ease, box-shadow 0.3s ease",
+                }}
+              >
+                <Shield className="w-4 h-4" />
+                <span>Cheat Detection</span>
+              </SidebarMenuButton>
+            </SidebarMenuItem>
+
+            <SidebarMenuItem>
+              <SidebarMenuButton
+                className="text-gray-800 hover:scale-105 hover:text-black hover:shadow-lg hover:shadow-purple-500/30 transition-all duration-300 ease-out rounded-md"
+                style={{
+                  transformOrigin: "center",
+                  transition: "transform 0.2s ease, box-shadow 0.3s ease",
+                }}
+              >
+                <Globe className="w-4 h-4" />
+                <span>Multilingual Support</span>
+              </SidebarMenuButton>
+            </SidebarMenuItem>
+
+          </SidebarMenu>
+        </SidebarGroupContent>
+      </SidebarGroup>
+
       </SidebarContent>
 
       <SidebarFooter className="p-4">
