@@ -45,12 +45,6 @@ const menuItems = [
     icon: BarChart3,
     key: "analytics",
   },
-  {
-    title: "Settings",
-    url: "#",
-    icon: Settings,
-    key: "settings",
-  },
 ]
 
 interface AppSidebarProps {
