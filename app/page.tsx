@@ -8,7 +8,6 @@ import { JobManagement } from "@/components/job-management"
 import { InterviewScheduler } from "@/components/interview-scheduler"
 import { CandidatePipeline } from "@/components/candidate-pipeline"
 import { Analytics } from "@/components/analytics"
-import { Settings } from "@/components/settings"
 
 export default function HRDashboard() {
   const [activeTab, setActiveTab] = useState("dashboard")
@@ -25,8 +24,6 @@ export default function HRDashboard() {
         return <CandidatePipeline />
       case "analytics":
         return <Analytics />
-      case "settings":
-        return <Settings />
       default:
         return <DashboardOverview />
     }
